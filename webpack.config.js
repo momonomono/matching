@@ -1,4 +1,6 @@
 const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 
 module.exports = {
     mode: "development",
@@ -17,11 +19,18 @@ module.exports = {
                         "vue", "@babel/preset-env",
                     ],
                 },
-            }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
         ]
     },
     resolve: {
         modules: [path.join(__dirname, '/resources/'), 'node_modules'],
-        extensions: ['.js', '.jsx']
-    }
+        extensions: ['.js', '.vue']
+    },
+    plugins: [
+        new VueLoaderPlugin()
+    ]
 }
