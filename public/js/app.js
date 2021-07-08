@@ -361,9 +361,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("/**\n * First we will load all of this project's JavaScript dependencies which\n * includes Vue and other libraries. It is a great starting point when\n * building robust, powerful web applications using Vue and Laravel.\n */\n__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");\n\nwindow.Vue = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/**\n * The following block of code may be used to automatically register your\n * Vue components. It will recursively scan this directory for the Vue\n * components and automatically register them with their \"basename\".\n *\n * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>\n */\n// const files = require.context('./', true, /\\.vue$/i)\n// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))\n\nVue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ \"./resources/js/components/ExampleComponent.vue\").default);\n/**\n * Next, we will create a fresh Vue application instance and attach it to\n * the page. Then, you may begin adding components to this application\n * or customize the JavaScript scaffolding to fit your unique needs.\n */\n\nvar app = new Vue({\n  el: '#app'\n});\n\n//# sourceURL=webpack:///./resources/js/app.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/app.scss */ \"./resources/sass/app.scss\");\n/**\n * First we will load all of this project's JavaScript dependencies which\n * includes Vue and other libraries. It is a great starting point when\n * building robust, powerful web applications using Vue and Laravel.\n */\n__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");\n\n\n/**\n * The following block of code may be used to automatically register your\n * Vue components. It will recursively scan this directory for the Vue\n * components and automatically register them with their \"basename\".\n *\n * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>\n */\n// const files = require.context('./', true, /\\.vue$/i)\n// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))\n\nvue__WEBPACK_IMPORTED_MODULE_0__.default.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ \"./resources/js/components/ExampleComponent.vue\").default);\n/**\n * Next, we will create a fresh Vue application instance and attach it to\n * the page. Then, you may begin adding components to this application\n * or customize the JavaScript scaffolding to fit your unique needs.\n */\n\nvar app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({\n  el: '#app'\n});\n\n\n//# sourceURL=webpack:///./resources/js/app.js?");
 
 /***/ }),
 
@@ -374,6 +375,17 @@ eval("/**\n * First we will load all of this project's JavaScript dependencies w
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("window._ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/**\n * We'll load jQuery and the Bootstrap jQuery plugin which provides support\n * for JavaScript based Bootstrap features such as modals and tabs. This\n * code may be modified to fit the specific needs of your application.\n */\n\ntry {\n  window.Popper = __webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\").default;\n  window.$ = window.jQuery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n  __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n} catch (e) {}\n/**\n * We'll load the axios HTTP library which allows us to easily issue requests\n * to our Laravel back-end. This library automatically handles sending the\n * CSRF token as a header based on the value of the \"XSRF\" token cookie.\n */\n\n\nwindow.axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\nwindow.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';\n/**\n * Echo exposes an expressive API for subscribing to channels and listening\n * for events that are broadcast by Laravel. Echo and event broadcasting\n * allows your team to easily build robust real-time web applications.\n */\n// import Echo from 'laravel-echo';\n// window.Pusher = require('pusher-js');\n// window.Echo = new Echo({\n//     broadcaster: 'pusher',\n//     key: process.env.MIX_PUSHER_APP_KEY,\n//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,\n//     encrypted: true\n// });\n\n//# sourceURL=webpack:///./resources/js/bootstrap.js?");
+
+/***/ }),
+
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./resources/sass/app.scss?");
 
 /***/ }),
 
