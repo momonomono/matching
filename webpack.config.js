@@ -41,12 +41,16 @@ module.exports = {
     },
     resolve: {
         modules: [path.join(__dirname, '/resources/'), 'node_modules'],
-        extensions: ['.js', '.vue']
+        extensions: ['.js', '.vue'],
+        alias:{
+            'vue$': 'vue/dist/vue.esm.js',
+        }
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename : "css/style.css"
         }),
         new VueLoaderPlugin()
-    ]
+    ],
+    
 }
