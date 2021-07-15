@@ -1,12 +1,12 @@
 @extends ('layouts.layout')
 
-@section('title','ログイン')
+@section('title','ユーザー登録')
 
 @section('body')
     <div>
-        <login-component 
+        <signup-component 
             :csrf = "{{ json_encode(csrf_token()) }}"
             :err-msg = "{{ $errors }}"
-        ></login-component>
+        ></signup-component>
     </div>
 @endsection

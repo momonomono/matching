@@ -1,0 +1,16 @@
+$color-bg__main : #f0f0f0;
+$color-bg__inputBox : #fff;
+$color-bg__primary : #2675cf;
+
+$color-border__form : #e0e0e0;
+$color-border__err : #ff0000;
+
+$color-font__errMsg : #ff0000;
+$color-font__button : #fff;
+
+$breakpoints: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;

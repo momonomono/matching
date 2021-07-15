@@ -1,9 +1,11 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const LiveReloadPlugin = require("webpack-livereload-plugin");
 
 
 module.exports = {
+    watch : true,
     mode: "development",
     entry: "./resources/js/app.js",
     output: {
@@ -34,8 +36,13 @@ module.exports = {
                             publicPath : path.join(__dirname,"public/css")
                         },
                     },
-                    "css-loader"
-                ]
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+            {
+                test : /\.scss/,
+                loader : 'import-glob-loader'
             }
         ]
     },
@@ -50,7 +57,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename : "css/style.css"
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new LiveReloadPlugin()
     ],
-    
 }

@@ -9,7 +9,8 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "build": "webpack",
-        "build-watch": "npm run build -- --watch"
+        "build-watch": "npm run build -- --watch",
+        "start": "webpack-dev-server"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.14.7",
@@ -19,6 +20,7 @@
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
         "css-loader": "^5.2.6",
+        "import-glob-loader": "^1.1.0",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
@@ -28,12 +30,14 @@
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
         "style-loader": "^3.0.0",
-        "vue": "^2.5.17",
+        "vue-loader": "^15.9.7",
         "vue-template-compiler": "^2.6.10",
         "webpack": "^5.42.1",
-        "webpack-cli": "^4.7.2"
+        "webpack-cli": "^4.7.2",
+        "webpack-import-glob-loader": "^1.6.3",
+        "webpack-livereload-plugin": "^3.0.1"
     },
     "dependencies": {
-        "vue-loader": "^15.9.7"
+        "vue": "^2.6.14"
     }
 }

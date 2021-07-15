@@ -4,35 +4,31 @@
             <form method="post">
                 <input type="hidden" name="_token" :value="csrf">
 
-                <h2 class="p-form__title">ログイン</h2>
+                <h2 class="p-form__title">ユーザー登録</h2>
 
                 <div class="p-form__container">
-                    <!-- メールアドレス -->
-                    <FormLabel
+                    <FormLabel 
                         title = "メールアドレス"
                         formName = "email"
-                        :errMsg = "errMsg['email'] "
+                        :errMsg = "errMsg['email']"
                     />
 
-                    <!-- パスワード -->
-                    <FormLabel
+                    <FormLabel 
                         title = "パスワード"
                         formName = "password"
-                        :errMsg = "errMsg['password'] "
+                        :errMsg = "errMsg['password']"
                     />
 
-                    <div class="p-form__loginSave">
-                        <input type="checkbox" name="" class="p-form__checkBox c-input__checkBox">
-                        <p>ログインを保存する</p>
-                    </div>
+                    <FormLabel 
+                        title = "パスワード(確認)"
+                        formName = "password_confirmation"
+                    />
 
                     <button class="p-form__button c-button__form">
-                        ログイン
+                        登録
                     </button>
-
                 </div>
             </form>
-
         </section>
     </div>
 </template>
