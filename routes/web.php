@@ -23,3 +23,4 @@ Route::post('/login','LoginController@postLogin')->name('postLogin');
 Route::get('/signup','SignupController@signup')->name('signup');
 Route::post('/signup','SignupController@postSignup')->name('postSignup');
 
+Route::get('/mypage','MainController@mypgae')->name('mypage');
