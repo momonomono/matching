@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ValiLoginRequest;
-use App\Http\Requests\ValiSignupRequest;
+use Illuminate\Support\Facades\Auth;
 
 class FormController extends Controller
 {
@@ -17,20 +17,14 @@ class FormController extends Controller
 
     public function postLogin(ValiLoginRequest $request){
 
-        return view();
-    }
+        $credentials = $request -> only('email','password');
+        $remember = $request -> only('remember_token');
 
-
-    // ユーザー登録画面
-    public function signup(){
+        if(Auth::attempt($credentials,$remember)){
+            
+            return view('mypage');
+        }
         
-        return view('signup');
-    }
-
-    public function postSignup(ValiSignupRequest $requiest){
-
-        
-
-        return view();
+        return redirect();
     }
 }

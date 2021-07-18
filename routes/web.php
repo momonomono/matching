@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/login', 'FormController@login')->name('login');
-Route::post('/login','FormController@postLogin')->name('postLogin');
+Route::get('/login', 'LoginController@login')->name('login');
+Route::post('/login','LoginController@postLogin')->name('postLogin');
 
-Route::get('/signup','FormController@signup')->name('signup');
-Route::post('/signup','FormController@postSignup')->name('postSignup');
+Route::get('/signup','SignupController@signup')->name('signup');
+Route::post('/signup','SignupController@postSignup')->name('postSignup');

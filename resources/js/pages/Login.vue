@@ -22,7 +22,7 @@
                     />
 
                     <div class="p-form__loginSave">
-                        <input type="checkbox" name="" class="p-form__checkBox c-input__checkBox">
+                        <input type="checkbox" name="remember_token" class="p-form__checkBox c-input__checkBox">
                         <p>ログインを保存する</p>
                     </div>
 
