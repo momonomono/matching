@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ValiLoginRequest;
 use Illuminate\Support\Facades\Auth;
 
-class FormController extends Controller
+class LoginController extends Controller
 {
 
     // ログイン画面
