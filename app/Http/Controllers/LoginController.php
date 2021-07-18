@@ -22,9 +22,9 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials,$remember)){
             
-            return view('mypage');
+            return redirect('/mypage');
         }
         
-        return redirect();
+        return redirect('login')->with('flash_message','メールアドレスかパスワードが違います');
     }
 }

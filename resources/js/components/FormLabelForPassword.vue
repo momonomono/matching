@@ -1,17 +1,14 @@
 <template>
-
   <label class="p-form__label">
-        <p class="p-form__text">{{ title }}</p>
-        <input
-            class = "p-form__input c-input__form"
-            type = "text"
-            :class = "changeBorderErrInputbox"
-            :name = "formName"
-            :value = "value"
-        />
-        <p class="p-form__errMsg">{{ errText }}</p>
+    <p class="p-form__text">{{ title }}</p>
+    <input
+      class="p-form__input c-input__form"
+      type="password"
+      :class="changeBorderErrInputbox"
+      :name="formName"
+    />
+    <p class="p-form__errMsg">{{ errText }}</p>
   </label>
-
 </template>
 
 <script>
@@ -28,9 +25,6 @@
             errMsg :{
                 required :false
             },
-            value :{
-                required :false
-            }
         },
         data : function(){
             return {
@@ -51,5 +45,4 @@
             }
         }
     }
-
 </script>

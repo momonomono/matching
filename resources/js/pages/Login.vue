@@ -6,19 +6,25 @@
 
                 <h2 class="p-form__title">ログイン</h2>
 
+                <div class="p-form__errBox">
+                    <p class="p-form__errMsg"></p>
+                </div>
+
                 <div class="p-form__container">
                     <!-- メールアドレス -->
                     <FormLabel
+                        inputType = "text"
                         title = "メールアドレス"
                         formName = "email"
                         :errMsg = "errMsg['email'] "
+                        :value = "oldEmail"
                     />
 
                     <!-- パスワード -->
-                    <FormLabel
+                    <FormLabelForPassword
                         title = "パスワード"
                         formName = "password"
-                        :errMsg = "errMsg['password'] "
+                        :errMsg = "errMsg['password']"
                     />
 
                     <div class="p-form__loginSave">
@@ -39,19 +45,29 @@
 
 <script>
     import FormLabel from "../components/FormLabel.vue";
+    import FormLabelForPassword from "../components/FormLabelForPassword";
 
     export default{
         props :{
-            csrf : {
-                type : String,
-                required : true
-            },
             errMsg :{
                 required : true
+            },
+            flashMsg :{
+                required : false
+            },
+            old : {
+                requied :false
+            }
+        },
+        data :function(){
+            return {
+                csrf : document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                oldEmail : this.old.email
             }
         },
         components :{
-            FormLabel
+            FormLabel,
+            FormLabelForPassword
         }
     }
 </script>

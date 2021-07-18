@@ -470,8 +470,12 @@ template {
   margin: 0 auto;
 }
 
+.l-header {
+  width: 100%;
+}
+
 .c-button__form {
-  background: #2675cf;
+  background: #3666dd;
   color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -501,23 +505,20 @@ template {
   border: 3px solid #e0e0e0;
 }
 .p-form__title {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.p-form__title::before {
-  content: "";
-  width: 100px;
-  height: 4px;
-  color: #2675cf;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #3666dd;
+  user-select: none;
 }
 .p-form__label {
   display: block;
   margin-bottom: 10px;
+  position: relative;
 }
 .p-form__text {
   font-size: 20px;
   margin-bottom: 10px;
+  user-select: none;
 }
 .p-form__input {
   font-size: 24px;
@@ -538,10 +539,36 @@ template {
   margin-top: 50px;
   width: 200px;
   height: 50px;
+  font-size: 20px;
 }
 .p-form__errMsg {
   color: #ff0000;
   height: 30px;
   display: flex;
   align-items: center;
+}
+
+.p-header {
+  height: 70px;
+  background: #3666dd;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+.p-header__logo {
+  width: 200px;
+  position: relative;
+  left: 30px;
+}
+.p-header__container {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.p-header__item {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 50px;
 }

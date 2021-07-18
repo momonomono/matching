@@ -22,6 +22,6 @@ class SignupController extends Controller
             'password' => Hash::make($request->input('password')),
         ]);
 
-        return view('mypage');
+        return redirect("/mypage");
     }
 }

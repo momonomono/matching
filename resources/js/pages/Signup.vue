@@ -7,19 +7,20 @@
                 <h2 class="p-form__title">ユーザー登録</h2>
 
                 <div class="p-form__container">
-                    <FormLabel 
+                    <FormLabel
                         title = "メールアドレス"
                         formName = "email"
                         :errMsg = "errMsg['email']"
+                        :value = "oldEmail"
                     />
 
-                    <FormLabel 
+                    <FormLabelForPassword
                         title = "パスワード"
                         formName = "password"
                         :errMsg = "errMsg['password']"
                     />
 
-                    <FormLabel 
+                    <FormLabelForPassword
                         title = "パスワード(確認)"
                         formName = "password_confirmation"
                     />
@@ -35,19 +36,26 @@
 
 <script>
     import FormLabel from "../components/FormLabel.vue";
+    import FormLabelForPassword from "../components/FormLabelForPassword.vue";
 
     export default{
         props :{
-            csrf : {
-                type : String,
-                required : true
-            },
             errMsg :{
                 required : true
+            },
+            old :{
+                required :false
+            }
+        },
+        data :function(){
+            return {
+                csrf : document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                oldEmail : this.old.email
             }
         },
         components :{
-            FormLabel
+            FormLabel,
+            FormLabelForPassword
         }
     }
 </script>

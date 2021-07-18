@@ -1,0 +1,27 @@
+.p-header{
+    height:70px;
+    background:$color-bg__primary;
+    display:flex;
+    align-items: center;
+    user-select: none;
+
+    &__logo{
+        width:200px;
+        position:relative;
+        left:30px;
+    }
+
+    &__container{
+        position:absolute;
+        right:0;
+        display:flex;
+        align-items: center;
+        margin-right:30px;
+    }
+
+    &__item{
+        color:$color-font__header;
+        font-size:16px;
+        margin-right:50px;
+    }
+}

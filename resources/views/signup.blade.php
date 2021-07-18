@@ -5,8 +5,8 @@
 @section('body')
     <div>
         <signup-component 
-            :csrf = "{{ json_encode(csrf_token()) }}"
             :err-msg = "{{ $errors }}"
+            :old = "{{ json_encode(Session::getOldInput()) }}"
         ></signup-component>
     </div>
 @endsection
